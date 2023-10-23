@@ -6,7 +6,7 @@ Depending on how many pages you have, if you use ACF, and if your pages are orde
 
 ## The Solution
 This is possibly just a partial solution as your config can continue to grow. I've seen in the site I was working in at the time that there were many old an unused values do to ACF structure changing and fields being removed.
-This script will get the value of the `wp_options` row where the `meta_key` is `icl_sitepress_settings`. The `custom_term_fields_translation` and `custom_fields_translation` elements from the value of that row will be compared to the `wp_postmeta` table to see if the `icl_sitepress_settings` indices have a matching row in the `wp_postmeta` table where the `meta_key` is a match. If there is no match then the index is removed from the `icl_sitepress_settings`. This will not remove any data from the `wp_postmeta` table.
+This script will get the value of the `wp_options` row where the `meta_key` is `icl_sitepress_settings`. The `custom_term_fields_translation` and `custom_fields_translation` elements from the value of that row will be compared to the `wp_postmeta` table to see if the `icl_sitepress_settings` indices have a matching row in the `wp_postmeta` table where the `meta_key` is a match. If there is no match then the indice is removed from the `icl_sitepress_settings`. This will not remove any data from the `wp_postmeta` table.
 
 ## Warning
 Make a backup of your existing `icl_sitepress_settings` row in the `wp_options` table before running the script. And your whole db for that matter.
